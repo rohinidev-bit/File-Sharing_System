@@ -119,20 +119,6 @@ app.get('/files/share/:id', (req, res) => {
            });
         }
       });
-
-/*     
-    const dfile = gfs.files.findOne({ filename: req.params.filename });
-    console.log(req.params.id);
-    if(!dfile){
-      return res.render('download', {error:'Cant execute anymore'});
-    }
-    if(dfile){
-      return res.render('download', {
-        files: files,
-        id: req.params.id,
-        downloadLink: `http://localhost:5000/share/files/download/${req.params.id}`,
-      }); 
-    }  */
   }catch(err){
     return res.render('download', {error:'ERROR'});
   }
