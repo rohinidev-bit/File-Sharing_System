@@ -1,0 +1,17 @@
+<html>
+  <head>
+    Download
+  </head>
+  <% if(locals.error){ %>
+  <h2><%= locals.error %> </h2>
+  <% } else {  %>
+  <h2> Ready to Download </h2>
+  <p> Under 24 hours </p>
+  <h3> <%= id %> </h3>
+  <% }  %>
+  <% if(files){ %>
+          <form method="GET" action="/files/share/download/<%=id %>?_method="GET">
+            <button class="btn btn-info btn-block mt-4">download</button>
+          </form>    
+      <% } %>
+</html>
